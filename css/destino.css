@@ -1,0 +1,37 @@
+div {
+  color: coral;
+  background-color: #1b1b1a;
+  font-size: large;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+}
+
+div:hover {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  border: 1rem solid #f30707;
+  margin-left: 35%;
+  margin-right: 35%;
+  border-radius: 3rem;
+  -webkit-border-radius: 3rem;
+  -moz-border-radius: 3rem;
+  -ms-border-radius: 3rem;
+  -o-border-radius: 3rem;
+  background-color: #585857;
+}
+
+p {
+  color: aqua;
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=destino.css.map */
