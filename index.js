@@ -54,3 +54,6 @@ alert("no ingreso nada");
 }else {
     alert("no esta a la venta");
 }
+
+let pasar="No te olvides de paras el mouse por arriba del TITULO..!!";
+alert(pasar);
