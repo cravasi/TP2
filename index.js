@@ -57,3 +57,29 @@ alert("no ingreso nada");
 
 let pasar="No te olvides de paras el mouse por arriba del TITULO..!!";
 alert(pasar);
+
+//condicionales compuestas &&
+let nomre=prompt("ingresar nombre");
+let apellido=prompt("ingrear apellido");
+
+if((nomre!="")&&(apellido!="")){
+alert("el nombre y apellido ingresado es,"+" "+nomre+" "+apellido);
+}else{
+    alert("ERROR: Ingresar nombre y apellido");
+}
+
+//condicional compuesta 
+let nom=prompt("ingresa el nombre incognita (ayuda: suele ser el tuyo!!)");
+if((nom=="CLAUDIO")||(nom=="claudio")){
+    alert("el nombre de incognita es el correcto," +" "+ nom);
+}else{
+    alert(nom+" "+"NO es el nombre incognita");
+}
+
+//combinacion de operadores && ||, suelen usarse como identificacion de claves
+let usuario=prompt("ingrese su usuario (suele ser el tuyo)");
+if((usuario!="")&&(usuario=="claudio")||(usuario=="CLAUDIO")){
+alert("Hola Claudio");
+}else{
+alert("ERROR, ingrese usuario valido");
+}
