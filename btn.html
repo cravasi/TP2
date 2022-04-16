@@ -1,0 +1,8 @@
+<button>Haz click con el derecho, izquierdo o central </button>
+ <script>
+let boton = document.querySelector("button"); boton.addEventListener("mousedown", evento => {
+if (evento.button == 0) { console.log("Botón izquierdo");
+} else if (evento.button == 1) { console.log("Botón central");
+} else if (evento.button == 2) { console.log("Botón derecho");
+} });
+</script>

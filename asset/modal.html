@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/modal.css">
+    
+</head>
+
+
+
+<body>
+    <div class="btn-group">
+        <button type="button" class="open-modal" data-open="modal2">
+          Presiona para ver tu permiso..!!
+        </button>
+      </div>
+      
+      
+      <div class="modal" id="modal2" data-animation="mixInAnimations">
+        <div class="modal-dialog">
+          <header class="modal-header">
+            Eres mayor de 18 años..?
+            <button class="close-modal" aria-label="close modal" data-close>
+              ✕  
+            </button>
+          </header>
+          <section class="modal-content">
+            <p><strong>Press ✕, ESC, si eres menor</strong></p>
+          </section>
+
+          <footer class="modal-footer">
+            <button id="btnModal" style="text-decoration: none;" class="bg js"><a target="_blanc" href="../asset/sorteo.html"> <strong>Click Me, si eres mayor de edad!!</strong></a> </button>
+          </footer>
+        </div>
+      </div>
+     
+      
+      <script src="../js/modal.js"></script>
+</body>
+</html>

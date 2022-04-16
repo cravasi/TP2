@@ -1,4 +1,4 @@
-div {
+.div {
   color: coral;
   background-color: #1b1b1a;
   font-size: large;
@@ -11,7 +11,7 @@ span {
   justify-content: center;
 }
 
-div:hover {
+.div:hover {
   transform: scale(1.2);
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
@@ -28,10 +28,88 @@ div:hover {
   background-color: #585857;
 }
 
-p {
+.p {
   color: aqua;
   display: flex;
   justify-content: center;
+}
+
+aside {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  border: solid 0.5rem yellow;
+  border-radius: 5rem;
+  background-color: #535252;
+  -webkit-border-radius: 5rem;
+  -moz-border-radius: 5rem;
+  -ms-border-radius: 5rem;
+  -o-border-radius: 5rem;
+}
+
+.bg {
+  background-color: black;
+  text-decoration: none;
+}
+
+.js:hover {
+  background-color: #f10f0f;
+}
+
+strong {
+  color: #f8f2f2;
+  text-decoration: none;
+  font-size: 3rem;
+}
+
+h1, h2 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  background-color: #c1c445;
+  display: flex;
+  justify-content: center;
+}
+
+.div-sam {
+  background-color: #e0baf3;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+}
+
+img {
+  grid-area: 1/2/1;
+  border: solid 0.3rem black;
+  border-radius: 0 10rem 0 10rem;
+}
+
+img:hover {
+  transform: skewX(10deg);
+  -webkit-transform: skewX(10deg);
+  -moz-transform: skewX(10deg);
+  -ms-transform: skewX(10deg);
+  -o-transform: skewX(10deg);
+}
+
+.defino {
+  font-size: medium;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.salir {
+  display: flex;
+  justify-content: center;
+  margin: 5rem;
+  font-size: 2rem;
+  background-color: #a5a2a2;
+  border: #252525 solid 0.2rem;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
 }
 
 /*# sourceMappingURL=destino.css.map */

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Un juego de adivinos</title>
+    <script type="text/javascript">
+        var random = 0; //número aleatorio
+        var start = 0; //Tiempo de empezar
+        var end = 0;  //Hora de finalización
+        function startTime() {
+            start = new Date();
+        }
+        function endTime() {
+            end = new Date();
+        }
+        // Tres modos de juego, después del final, salga del modo de juego seleccionado y completado con éxito el juego en el cuadro.
+        function primary() {
+            random = parseInt(Math.random() * 99 + 1);
+            var timeprimary = startgame();
+            document.getElementById("his").innerHTML = "primario:" + timeprimary + "segundo";
+        }
+        function middle() {
+            random = parseInt(Math.random() * 999 + 1);
+            var timemiddle = startgame();
+            document.getElementById("his").innerHTML = "intermedio:" + timemiddle + "segundo";
+        }
+        function high() {
+            random = parseInt(Math.random() * 9999 + 1);
+            var timehigh = startgame();
+            document.getElementById("his").innerHTML = "avanzado:" + timehigh + "segundo";
+        }
+
+        // Si no hay entrada, se determina o cancela. La solicitud aún devuelve un valor vacío o la cadena vacía, y el valor de entrada no es un número, vuelve "NULL"
+        function shuru() {
+            var temp = prompt("adivina");
+            if (temp == "" || temp == null) {
+                alert("No puedes entrar vacío");
+                return "NULL";
+            } else {
+                if (isNaN(temp)) {
+                    return "NULL";
+                } else {
+                    return parseInt(temp);
+                }
+            }
+        }
+
+        // Cuando reconozco el error de entrada (el valor de retorno es una cadena "null"), el error de solicitud, devuelve el error, de lo contrario el juicio
+        function jiaoyan() {
+            var que = shuru();
+            if (que != "NULL") {
+                if (que == random) {
+                    alert("Felicitaciones por su respuesta");
+                    return true;
+                } else if (que > random) {
+                    alert("Entrar en grande");
+                    return false;
+                } else {
+                    alert("Entra a pequeño");
+                    return false;
+                }
+            } else {
+                alert("Por favor reinicie el juego");
+                return Error;
+            }
+        }
+
+        // Cuando el valor vuelve al error, la función se devuelve al mismo tiempo, y la función continúa ejecutándose. Cuando el valor vuelve al valor, se describirá el error de entrada, continúe la entrada de la casilla. Cuando sea verdadero, ingrese el correcto, ciclo final y calculado
+        function startgame() {
+            startTime();
+            var a = false;
+            while (!a) {
+                a = jiaoyan();
+                if (a == Error) {
+                    return 9999;
+                }
+            }
+            endTime();
+            var time = (end - start) / 1000;
+            alert("Costo del tiempo" + time + "segundo");
+            return time;
+        }
+    </script>
+
+    <style type="text/css">
+        #his {
+            font-size: 20;
+            width: 150px;
+            height: 25px;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div>
+        Un juego de adivinos
+        <br />
+        Seleccione Dificultad, Primaria (1-100), Intermedio (1-1000), Avanzado (1-10000)
+        <br />
+        <input type="button" value="primario" onclick="primary()" />
+        <input type="button" value="intermedio" onclick="middle()" />
+        <input type="button" value="avanzado" onclick="high()" />
+        <div id="his">
+
+        </div>
+    </div>
+</body>
+
+</html>
